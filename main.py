@@ -1,5 +1,3 @@
-#Gen Z to Corporate Translator App with Updated Claude API
-
 import streamlit as st
 from anthropic import Anthropic
 import datetime
@@ -34,16 +32,13 @@ def log_translation(input_phrase, output_phrase):
         st.warning(f"Unable to log translation: {str(e)}")
 
 def call_claude(system_prompt, user_input):
-    """Call Claude API with the given prompts using the new Messages API"""
+    """Call Claude API with the given prompts using the Messages API"""
     try:
         client = init_anthropic_client()
         response = client.messages.create(
             model="claude-3-sonnet-20240229",
+            system=system_prompt,
             messages=[
-                {
-                    "role": "system",
-                    "content": system_prompt
-                },
                 {
                     "role": "user",
                     "content": user_input
@@ -69,7 +64,7 @@ def translate_phrase(input_phrase):
     return "Translation error occurred. Please try again."
 
 # Streamlit UI
-st.title("🔄 Gen Z to Corporate Translator by Ankita")
+st.title("🔄 Gen Z to Corporate Translator by your girl Ankita")
 st.write("Convert your casual Gen Z phrases into corporate-appropriate language")
 
 # Example phrases
