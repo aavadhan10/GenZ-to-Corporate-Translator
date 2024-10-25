@@ -1,4 +1,4 @@
-Gen Z to Corporate Translator App with Updated Claude API
+#Gen Z to Corporate Translator App with Updated Claude API
 
 import streamlit as st
 from anthropic import Anthropic
@@ -69,7 +69,7 @@ def translate_phrase(input_phrase):
     return "Translation error occurred. Please try again."
 
 # Streamlit UI
-st.title("🔄 Gen Z to Corporate Translator")
+st.title("🔄 Gen Z to Corporate Translator by Ankita")
 st.write("Convert your casual Gen Z phrases into corporate-appropriate language")
 
 # Example phrases
