@@ -65,7 +65,7 @@ def translate_phrase(input_phrase):
 
 # Streamlit UI
 st.title("🔄 Gen Z to Corporate Translator by your girl Ankita")
-st.write("Convert your casual Gen Z phrases into corporate-appropriate language")
+st.write("Convert your casual Gen Z phrases and inhibitions into corporate-appropriate language to avoid workplace drama")
 
 # Example phrases
 examples = {
